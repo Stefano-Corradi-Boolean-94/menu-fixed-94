@@ -1,0 +1,73 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* questa istruzione ci consente lo scroll morbido della pagina al click delle ancore */
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #CDCDCD;
+  text-align: center;
+}
+
+header img{
+  height: 32px;
+  vertical-align: middle;
+}
+
+header nav li{
+  list-style: none;
+  display: inline-block;
+  line-height: 70px;
+  margin-right: 30px;
+}
+
+header nav li a{
+  display: inline-block;
+  line-height: 70px;
+  color: #436DE1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0 5px;
+}
+
+header nav li a:hover{
+  background-color: grey;
+}
+
+header nav li a.active{
+  border-bottom: 3px solid #66EA67;
+}
+
+main{
+  padding-top: 70px;
+}
+
+section h2{
+  margin: 20px 0;
+}
+
+section p{
+  line-height: 30px;
+}
+
+/* per evitare che le ancore finiscano ditro il menu fixed */
+section::before{
+  content: '';
+  display: block;
+  height: 70px;
+  margin: -70px 0 0 ;
+}
